@@ -1,12 +1,20 @@
 import React from "react";
 import Page from "../components/Page";
-import { Box, Card, Grid2, Link, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  Divider,
+  Grid2,
+  Link,
+  Stack,
+  Typography,
+} from "@mui/material";
 import me from "../img/me.jpg";
 import project1 from "../img/project1.png";
 function Main() {
   return (
     <Page>
-      <Grid2 container spacing={6} flex={1}>
+      {/* <Grid2 container spacing={6} flex={1}>
         <Grid2 size={{ sm: 6, xs: 12 }}>
           <Card>
             <Box
@@ -46,7 +54,16 @@ function Main() {
         <Grid2 size={{ md: 4, sm: 6, xs: 12 }}>
           <Card>Hi</Card>
         </Grid2>
-      </Grid2>
+      </Grid2> */}
+      <Box display="flex" justifyContent="center">
+        <Stack>
+          <Typography color="primary" variant="h1">
+            Wellcome!
+          </Typography>
+          <Divider />
+          <Typography>Hi</Typography>
+        </Stack>
+      </Box>
     </Page>
   );
 }
