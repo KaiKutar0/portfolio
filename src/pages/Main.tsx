@@ -1,16 +1,6 @@
-import React from "react";
 import Page from "../components/Page";
-import {
-  Box,
-  Card,
-  Divider,
-  Grid2,
-  Link,
-  Stack,
-  Typography,
-} from "@mui/material";
-import me from "../img/me.jpg";
-import project1 from "../img/project1.png";
+import { Box, Divider, Stack, Typography } from "@mui/material";
+
 function Main() {
   return (
     <Page>
