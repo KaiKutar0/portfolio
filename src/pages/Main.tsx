@@ -2,12 +2,16 @@ import Page from "../components/Page";
 import {
   Box,
   Button,
+  Card,
   Grid2,
+  IconButton,
   Slide,
   Stack,
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import me from "../img/me.jpg";
 import { useNavigate } from "react-router-dom";
 import { theme } from "../theme";
@@ -40,12 +44,33 @@ function Main() {
               <Typography color="primary" variant="h4">
                 Fullstack Developer
               </Typography>
-              <Box height={100} />
-              <Box>
-                <Button variant="contained" onClick={() => navigate("/about")}>
-                  Learn More
-                </Button>
-              </Box>
+              <Box height={50}></Box>
+              {!matches && (
+                <Card>
+                  <Stack spacing={2} direction="column">
+                    <IconButton
+                      href="https://www.linkedin.com/in/yurii-vasylchenko-1677b9275/"
+                      target="_blank"
+                    >
+                      <LinkedInIcon />
+                      <Typography>LinkedIn</Typography>
+                    </IconButton>
+                    <IconButton
+                      href="https://github.com/KaiKutar0"
+                      target="_blank"
+                    >
+                      <GitHubIcon />
+                      <Typography>GitHub</Typography>
+                    </IconButton>
+                  </Stack>
+                </Card>
+              )}
+              <Box height={50}></Box>
+              {/* <Box> */}
+              <Button variant="contained" onClick={() => navigate("/about")}>
+                Learn More
+              </Button>
+              {/* </Box> */}
             </Stack>
           </Slide>
         </Grid2>
