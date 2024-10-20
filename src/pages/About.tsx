@@ -1,12 +1,5 @@
 import Page from "../components/Page";
-import {
-  Box,
-  Card,
-  Divider,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Card, Divider, Stack, Typography } from "@mui/material";
 import typescriptIcon from "../img/typescript.svg";
 import javascriptIcon from "../img/javascript.svg";
 import javaIcon from "../img/java.svg";
@@ -22,9 +15,6 @@ import awsIcon from "../img/aws.svg";
 import graphqlIcon from "../img/graphql.svg";
 import mysqlIcon from "../img/mysql.svg";
 import restapiIcon from "../img/restapi.svg";
-
-import { theme } from "../theme";
-
 function About() {
   return (
     <Page>
