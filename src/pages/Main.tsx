@@ -1,59 +1,56 @@
 import Page from "../components/Page";
-import { Box, Divider, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Grid2,
+  Grow,
+  Slide,
+  Stack,
+  Typography,
+} from "@mui/material";
+import me from "../img/me.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Main() {
+  const navigate = useNavigate();
   return (
     <Page>
-      {/* <Grid2 container spacing={6} flex={1}>
+      <Grid2 container spacing={24} flex={1}>
         <Grid2 size={{ sm: 6, xs: 12 }}>
-          <Card>
+          <Slide direction="right" in={true} style={{}} timeout={5000}>
+            <Stack>
+              <Typography color="primary" variant="h1">
+                Wellcome!
+              </Typography>
+              <Typography color="primary" variant="h2">
+                I'm Yurii
+              </Typography>
+              <Typography color="primary" variant="h4">
+                Fullstack Developer
+              </Typography>
+              <Box height={100} />
+              <Box>
+                <Button variant="contained" onClick={() => navigate("/about")}>
+                  Learn More
+                </Button>
+              </Box>
+            </Stack>
+          </Slide>
+        </Grid2>
+        <Grid2 size={{ sm: 6, xs: 12 }}>
+          <Slide direction="left" in={true} style={{}} timeout={5000}>
             <Box
+              borderRadius={5}
               component="img"
-              sx={{
-                height: 180,
-                width: 150,
-                maxHeight: { xs: 120, md: 180 },
-                maxWidth: { xs: 90, md: 150 },
-              }}
-              alt="me"
               src={me}
-            />
-          </Card>
-        </Grid2>
-        <Grid2 size={{ sm: 6, xs: 12 }}></Grid2>
-        <Grid2 size={{ md: 4, sm: 6, xs: 12 }}>
-          <Card>
-            <Box
-              component="img"
               sx={{
-                height: 233,
-                width: 350,
-                maxHeight: { xs: 233, md: 167 },
-                maxWidth: { xs: 350, md: 250 },
+                maxHeight: { xs: 120, md: 360 },
+                maxWidth: { xs: 150, md: 240 },
               }}
-              alt="The house from the offer."
-              src={project1}
             />
-            <Typography variant="h5">
-              <Link href="https://github.com/KaiKutar0/Penumatic-Elements-Recognition">
-                Pneumatic recognition
-              </Link>
-            </Typography>
-          </Card>
+          </Slide>
         </Grid2>
-        <Grid2 size={{ md: 4, sm: 6, xs: 12 }}>
-          <Card>Hi</Card>
-        </Grid2>
-      </Grid2> */}
-      <Box display="flex" justifyContent="center">
-        <Stack>
-          <Typography color="primary" variant="h1">
-            Wellcome!
-          </Typography>
-          <Divider />
-          <Typography>Hi</Typography>
-        </Stack>
-      </Box>
+      </Grid2>
     </Page>
   );
 }
