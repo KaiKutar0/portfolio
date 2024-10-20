@@ -3,11 +3,7 @@ import {
   Box,
   Card,
   Divider,
-  Grid2,
-  Grow,
-  Paper,
   Stack,
-  SvgIcon,
   Typography,
   useMediaQuery,
 } from "@mui/material";
@@ -30,7 +26,6 @@ import restapiIcon from "../img/restapi.svg";
 import { theme } from "../theme";
 
 function About() {
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <Page>
       <Stack>

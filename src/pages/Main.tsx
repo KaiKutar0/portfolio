@@ -1,13 +1,5 @@
 import Page from "../components/Page";
-import {
-  Box,
-  Button,
-  Grid2,
-  Grow,
-  Slide,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Grid2, Slide, Stack, Typography } from "@mui/material";
 import me from "../img/me.jpg";
 import { useNavigate } from "react-router-dom";
 
