@@ -1,5 +1,13 @@
 import Page from "../components/Page";
-import { Box, Card, Divider, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  Divider,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import typescriptIcon from "../img/typescript.svg";
 import javascriptIcon from "../img/javascript.svg";
 import javaIcon from "../img/java.svg";
@@ -15,7 +23,11 @@ import awsIcon from "../img/aws.svg";
 import graphqlIcon from "../img/graphql.svg";
 import mysqlIcon from "../img/mysql.svg";
 import restapiIcon from "../img/restapi.svg";
+import { useNavigate } from "react-router-dom";
+import { theme } from "../theme";
 function About() {
+  const navigate = useNavigate();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <Page>
       <Stack>
@@ -75,6 +87,23 @@ function About() {
             <LangTile title="German" level="B1" />
           </Stack>
         </Box>
+        <Box height={50}></Box>
+        <Button
+          variant="contained"
+          sx={
+            matches
+              ? {
+                  minHeight: "50px",
+                  maxWidth: "200px",
+                  fontWeight: 700,
+                  fontSize: "1rem",
+                }
+              : {}
+          }
+          onClick={() => navigate("/projects")}
+        >
+          To projects
+        </Button>
       </Stack>
     </Page>
   );

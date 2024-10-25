@@ -12,7 +12,7 @@ function Page({
     <Box
       sx={{
         minHeight: "100vh",
-        padding: matches ? "10rem 12rem" : "2rem 4rem",
+        padding: matches ? "6rem 12rem" : "2rem 4rem",
         // display: "flex",
         // justifyContent: "center",
         // backgroundSize: "cover",

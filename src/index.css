@@ -20,7 +20,7 @@ a:focus,
 a:active,
 a:visited {
   text-decoration: none; /* No underline or hover effect */
-  color: inherit; /* No color change */
+  color: "#FFFFFF"; /* No color change */
   background: none; /* No background effect */
   outline: none; /* No focus outline */
 }

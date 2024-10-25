@@ -26,7 +26,7 @@ function NavBar() {
         <Stack>
           <Button onClick={() => navigate("/about")}>About Me</Button>
           <Button onClick={() => navigate("/projects")}>Projects</Button>
-          {/* <Button onClick={() => navigate("/contacts")}>Contacts</Button> */}
+          <Button onClick={() => navigate("/contacts")}>Contacts</Button>
         </Stack>
       </Drawer>
       <Toolbar>
@@ -39,7 +39,7 @@ function NavBar() {
             <Box sx={{ flex: 1, display: "flex", justifyContent: "center" }}>
               <Button onClick={() => navigate("/about")}>About Me</Button>
               <Button onClick={() => navigate("/projects")}>Projects</Button>
-              {/* <Button onClick={() => navigate("/contacts")}>Contacts</Button> */}
+              <Button onClick={() => navigate("/contacts")}>Contacts</Button>
             </Box>
 
             <Stack spacing={2} direction="row">

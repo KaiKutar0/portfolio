@@ -4,7 +4,6 @@ import {
   Button,
   Card,
   Grid2,
-  IconButton,
   Slide,
   Stack,
   Typography,
@@ -48,29 +47,40 @@ function Main() {
               {!matches && (
                 <Card>
                   <Stack spacing={2} direction="column">
-                    <IconButton
+                    <Button
+                      startIcon={<LinkedInIcon />}
                       href="https://www.linkedin.com/in/yurii-vasylchenko-1677b9275/"
                       target="_blank"
                     >
-                      <LinkedInIcon />
-                      <Typography>LinkedIn</Typography>
-                    </IconButton>
-                    <IconButton
+                      LinkedIn
+                    </Button>
+                    <Button
+                      startIcon={<GitHubIcon />}
                       href="https://github.com/KaiKutar0"
                       target="_blank"
                     >
-                      <GitHubIcon />
-                      <Typography>GitHub</Typography>
-                    </IconButton>
+                      GitHub
+                    </Button>
                   </Stack>
                 </Card>
               )}
               <Box height={50}></Box>
-              {/* <Box> */}
-              <Button variant="contained" onClick={() => navigate("/about")}>
+              <Button
+                variant="contained"
+                sx={
+                  matches
+                    ? {
+                        minHeight: "50px",
+                        maxWidth: "200px",
+                        fontWeight: 700,
+                        fontSize: "1rem",
+                      }
+                    : {}
+                }
+                onClick={() => navigate("/about")}
+              >
                 Learn More
               </Button>
-              {/* </Box> */}
             </Stack>
           </Slide>
         </Grid2>
